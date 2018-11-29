@@ -1,1 +1,1 @@
-Це публічний репозиторій моїх робіт, користування дозволяю.
+This is public repository of some of my projects. Using allowed.
