@@ -5,19 +5,19 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        SearchDictionary sd = new SearchDictionary();
+        SearchDictionary searchDictionary = new SearchDictionary();
 
-        sd.addWord("Kyiv","Київ");
-        sd.addWord("Kiev","Київ");
-        sd.addWord("Dn","Дніпро");
+        searchDictionary.addWord("Kyiv","Київ");
+        searchDictionary.addWord("Kiev","Київ");
+        searchDictionary.addWord("Lviv","Львів");
 
         String s=sc.nextLine();
-        if(s.contains("*"))
-            s.replace("*","");
 
-        List<String> results=sd.jSearch(s);
-        for (int i = 0; i <results.size() ; i++) {
-            System.out.println(results.get(i));
+        s=s.replace("*","");
+
+        List<String> rs=searchDictionary.jSearch(s);
+        for (int i = 0; i <rs.size() ; i++) {
+            System.out.println(rs.get(i));
         }
     }
 }

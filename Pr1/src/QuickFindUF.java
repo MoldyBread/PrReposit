@@ -1,12 +1,7 @@
 public class QuickFindUF {
-	private int[] id;
-	private int count;
+	int[] id;
+	int count;
 
-
-	/*
-	 * Конструктор, що ініціює масив,
-	 * а потім присвоює кожному об'єкту окрему групу
-	 */
 	public QuickFindUF(int n){
 		id = new int[n];
 		count = n;
@@ -14,16 +9,11 @@ public class QuickFindUF {
 			id[i]=i;
 	}
 
-	/*
-	 * метод, що перевіряє чи знаходяться p та q в одному компоненті
-	 */
+
 	public boolean connected(int p, int q){
 		return id[p]==id[q];
 	}
 
-	/*
-	 * метод, що робить два об'єкти p та q пов'язаними
-	 */
 	public int find(int p){
 		return id[p];
 	}

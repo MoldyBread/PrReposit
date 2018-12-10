@@ -1,6 +1,3 @@
-import java.io.BufferedInputStream;
-import java.io.FileInputStream;
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
@@ -18,25 +15,11 @@ public class Main {
         int n=sc.nextInt();
         Point[] p = new Point[n];
         for (int i = 0; i < n; i++) {
-            //p[i]=new Point(z.nextInt(32768),z.nextInt(32768));
             p[i]=new Point(sc.nextInt(),sc.nextInt());
             p[i].draw();
         }
 
 
-
-        /*
-9
-19000 2000
-19000 5000
-19000 15000
-19000 10000
-18000 10000
-21000 10000
-32000 10000
-1234 5678
-14000 10000
-*/
 
         Arrays.sort(p,Point::compareTo);
 

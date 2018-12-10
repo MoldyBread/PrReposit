@@ -3,11 +3,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- *
- * @author nastra - Eduard Tudenhoefner
- *
- */
+
 public class SAP {
     private Digraph graph;
 
@@ -34,12 +30,7 @@ public class SAP {
         return true;
     }
 
-    /**
-     *
-     * @param v
-     * @param w
-     * @return length of shortest ancestral path between v and w; -1 if no such path exists
-     */
+
     public int length(int v, int w) {
         if (!validIndex(v) || !validIndex(w)) {
             throw new ArrayIndexOutOfBoundsException();
@@ -47,12 +38,7 @@ public class SAP {
         return cachedResult(v, w).distance;
     }
 
-    /**
-     *
-     * @param v
-     * @param w
-     * @return a common ancestor of v and w that participates in a shortest ancestral path; -1 if no such path exists
-     */
+
     public int ancestor(int v, int w) {
         if (!validIndex(v) || !validIndex(w)) {
             throw new ArrayIndexOutOfBoundsException();
@@ -60,12 +46,7 @@ public class SAP {
         return cachedResult(v, w).ancestor;
     }
 
-    /**
-     *
-     * @param v
-     * @param w
-     * @return length of shortest ancestral path between any vertex in v and any vertex in w; -1 if no such path exists
-     */
+
     public int length(Iterable<Integer> v, Iterable<Integer> w) {
         if (!validIndex(v) || !validIndex(w)) {
             throw new ArrayIndexOutOfBoundsException();
@@ -73,12 +54,7 @@ public class SAP {
         return cachedResult(v, w).distance;
     }
 
-    /**
-     *
-     * @param v
-     * @param w
-     * @return a common ancestor that participates in shortest ancestral path; -1 if no such path exists
-     */
+
     public int ancestor(Iterable<Integer> v, Iterable<Integer> w) {
         if (!validIndex(v) || !validIndex(w)) {
             throw new ArrayIndexOutOfBoundsException();
@@ -86,11 +62,7 @@ public class SAP {
         return cachedResult(v, w).ancestor;
     }
 
-    /**
-     * for unit testing of this class (such as the one below)
-     *
-     * @param args
-     */
+
     public static void main(String[] args) {
         In in = new In(args[0]);
         Digraph graph = new Digraph(in);
@@ -108,7 +80,6 @@ public class SAP {
         String key = v + "_" + w;
         if (cache.containsKey(key)) {
             SAPProcessor p = cache.get(key);
-            // we need to cache only for 2 consecutive calls, therefore we delete the result after the second call
             cache.remove(key);
             return p;
         }

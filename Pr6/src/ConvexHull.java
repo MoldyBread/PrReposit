@@ -1,28 +1,15 @@
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.Stack;
 
 public class ConvexHull {
 
-    // public static String testFile="test.txt";
-    // public static String testFile="input6.txt";
-    // public static String testFile="input40.txt";
-    // public static String testFile="input8.txt";
-    // public static String testFile="input50.txt";
-    // public static String testFile="input56.txt";
-    // public static String testFile="input100.txt";
-   // public static String testFile="input400.txt";
-   //public static String testFile="rs1423.txt";
-   // public static String testFile="grid6x6.txt";
+
    public static String testFile="horizontal100.txt";
 
 
 
     public static Point2D[] points;
-    public static Stack<Point2D> hull = new Stack<>();
 
     public static void main(String[] args) throws FileNotFoundException {
         StdDraw.setXscale(0, 32768);
@@ -52,7 +39,7 @@ public class ConvexHull {
          points[(int)minI]=points[0];
          points[0]=tmp;
 
-         PointCheck pc = new PointCheck(points);
+         Pchk pc = new Pchk(points);
 
 
         for (i = 0; i < n; i++)

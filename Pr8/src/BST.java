@@ -100,6 +100,7 @@ public class BST <Key extends Comparable<Key>, Value> {
         if (isEmpty()) throw new NoSuchElementException("called min() with empty symbol table");
         return min(root).key;
     }
+
     private Node min(Node x) {
         if (x.left == null) return x;
         else                return min(x.left);

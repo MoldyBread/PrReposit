@@ -11,26 +11,10 @@ public class Fast {
         int n=sc.nextInt();
         p = new Point[n];
         for (int i = 0; i < n; i++) {
-            //p[i]=new Point(z.nextInt(32768),z.nextInt(32768));
             p[i]=new Point(sc.nextInt(),sc.nextInt());
             p[i].draw();
         }
 
-
-
-        /*
-9
-19000 2000
-19000 5000
-19000 15000
-19000 10000
-18000 10000
-21000 10000
-32000 10000
-1234 5678
-14000 10000
-*/
-        int[] curr;
         for (int i = 0; i < n; i++) {
             pointSortedSlopes(i);
         }
@@ -73,24 +57,6 @@ public class Fast {
                 System.out.println("("+p[pnum].getX()+", "+p[pnum].getY()+") -> "+"("+p[(int)slopes[i][1]].getX()+", "+p[(int)slopes[i][1]].getY()+") -> "+"("+p[(int)slopes[i+1][1]].getX()+", "+p[(int)slopes[i+1][1]].getY()+") -> "+"("+p[(int)slopes[i+2][1]].getX()+", "+p[(int)slopes[i+2][1]].getY()+") -> ");
             }
         }
-
-        /*
-9
-19000 2000
-19000 5000
-19000 15000
-19000 10000
-18000 10000
-21000 10000
-32000 10000
-1234 5678
-14000 10000
-*/
-
-
-
-
-
 
         System.out.println();
     }

@@ -12,7 +12,7 @@ public class PercolationStats {
         System.out.println("Mean: "+m);
         System.out.println("Stddev: "+stddev(xss,m,T));
     }
-    // проведемо T окремих експериментів в N на N матриці
+
     public double mean(double[] xss,int T){
 
         double up=0;
@@ -22,7 +22,8 @@ public class PercolationStats {
 
         return up/T;
     }
-    // рахує середнє
+
+
     public double stddev(double[] xss,double m,int T){
         double up=0;
         for (int i = 0; i < T; i++) {
@@ -31,7 +32,7 @@ public class PercolationStats {
 
         return Math.sqrt(up/(T-1));
     }
-// рахує відхилення
+
 
     public static void main(String[] args) {
 

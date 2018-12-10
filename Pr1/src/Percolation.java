@@ -1,4 +1,3 @@
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class Percolation {
@@ -14,7 +13,6 @@ public class Percolation {
         }
         process();
     }
-    // створюємо матрицю N-на-N, з усіма заблокованими об’єктами
 
 
 
@@ -25,7 +23,7 @@ public class Percolation {
         else
             return false;
     }
-// чи протікає система?
+
 
     public int countQueue(int x,int y){
         int result=0;
@@ -60,7 +58,7 @@ public class Percolation {
     private void process(){
         int[] cell;
 
-        queueGeneration();
+        qG();
         for (int i = 0; i < opening.length; i++) {
             openedCount++;
             cell=countCell(opening[i]);
@@ -94,7 +92,6 @@ public class Percolation {
                     }
                 } catch (Exception ee) { }
 
-            //draw();
             if(percolates()){
                 System.out.println("YES");
 
@@ -113,22 +110,8 @@ public class Percolation {
         return openedCount;
     }
 
-    public void draw(){
-        System.out.println();
-        String s="";
-        for (int i = 0; i < Cells.length; i++) {
-            for (int j = 0; j < Cells.length; j++) {
-                if(Cells[j][i])
-                    s+="1 ";
-                else
-                    s+="0 ";
-            }
-            s+="\n";
-        }
-        System.out.println(s);
-    }
 
-    private void queueGeneration(){
+    private void qG(){
         opening = new int[Cells.length*Cells.length];
         for (int i = 0; i < opening.length; i++) {
             opening[i]=i;

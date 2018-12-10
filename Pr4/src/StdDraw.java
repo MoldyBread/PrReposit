@@ -1,25 +1,3 @@
-/*************************************************************************
- *  Compilation:  javac StdDraw.java
- *  Execution:    java StdDraw
- *
- *  Standard drawing library. This class provides a basic capability for
- *  creating drawings with your programs. It uses a simple graphics model that
- *  allows you to create drawings consisting of points, lines, and curves
- *  in a window on your computer and to save the drawings to a file.
- *
- *  Todo
- *  ----
- *    -  Add support for gradient fill, etc.
- *
- *  Remarks
- *  -------
- *    -  don't use AffineTransform for rescaling since it inverts
- *       images and strings
- *    -  careful using setFont in inner loop within an animation -
- *       it can cause flicker
- *
- *************************************************************************/
-
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.geom.*;
@@ -31,15 +9,7 @@ import java.util.TreeSet;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 
-/**
- *  <i>Standard draw</i>. This class provides a basic capability for
- *  creating drawings with your programs. It uses a simple graphics model that
- *  allows you to create drawings consisting of points, lines, and curves
- *  in a window on your computer and to save the drawings to a file.
- *  <p>
- *  For additional documentation, see <a href="http://introcs.cs.princeton.edu/15inout">Section 1.5</a> of
- *  <i>Introduction to Programming in Java: An Interdisciplinary Approach</i> by Robert Sedgewick and Kevin Wayne.
- */
+
 public final class StdDraw implements ActionListener, MouseListener, MouseMotionListener, KeyListener {
 
     // pre-defined colors

@@ -1,6 +1,6 @@
 public class Sorts{
 
-    class ExampleSelectionSort {
+    class SelectionSort {
         // Selection sort algorithm
         public  void selectionSort(int[] numbers, int low, int high) {
             for (int h = low; h <= high; h++)
@@ -37,7 +37,7 @@ public class Sorts{
         }// end for loop
     }
 
-    class ExampleMergeSort {
+    class MergeSort {
 
         /*
          * Internal method that makes recursive calls to sort the data

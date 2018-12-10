@@ -5,12 +5,16 @@ public class Main {
 
         Sorts sorts = new Sorts();
         int[] num = { 3,6,1,7,2,8,10,4,9,5};
-        System.out.println("Start array:");
+
+        st = new Stopwatch();
+        num = new int[]{3,6,1,7,2,8,10,4,9,5};
+        System.out.println("Selection sort:");
+        sorts. new SelectionSort().selectionSort(num,0,num.length-1);
         out(num,st);
 
         st = new Stopwatch();
         System.out.println("Merge sort(stable): ");
-        sorts.new ExampleMergeSort().mergeSort(num,0,num.length-1);
+        sorts.new MergeSort().mergeSort(num,0,num.length-1);
         out(num,st);
 
         st = new Stopwatch();
@@ -19,11 +23,7 @@ public class Main {
         sorts.insertionSort(num);
         out(num,st);
 
-        st = new Stopwatch();
-        num = new int[]{3,6,1,7,2,8,10,4,9,5};
-        System.out.println("Selection sort:");
-        sorts. new ExampleSelectionSort().selectionSort(num,0,num.length-1);
-        out(num,st);
+
     }
 
     public static void out(int[] num, Stopwatch stopwatch){
